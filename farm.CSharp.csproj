@@ -96,6 +96,7 @@
     <Compile Include="Assets\Farm\Scripts\TempoSphere.cs" />
     <Compile Include="Assets\Farm\Scripts\XboxEvents.cs" />
     <Compile Include="Assets\Farm\Scripts\XboxMover.cs" />
+    <Compile Include="Assets\Follow.cs" />
     <Compile Include="Assets\JellyFisher\Scripts\ChaScript.cs" />
     <Compile Include="Assets\JellyFisher\Scripts\Move.cs" />
     <Compile Include="Assets\Koreographer\Demos\Scripts\CubeScaler.cs" />
