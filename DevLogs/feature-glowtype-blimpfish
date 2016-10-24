@@ -1,0 +1,13 @@
+TODO :
+
+Use cute fish asset from asset store to create a glowing blimpfish.
+
+	> Change base color to match farm's color pallete
+	> Create 4x black-and-white copies of the fish texture, each highlighting a separate stripe
+	> Write a shader who computes the color of each pixel via the following linear combination:
+	  	pixelColor = baseColor + glow1*texture1 + glow2*texture2 + glow3*texture3 + glow4*texture4
+	  where pixelColor == end color of the pixel
+	  		glow       == color value coordinated w/ music
+	  		texture    == color value on stripe texture 1/2/3/4 (white or black)
+	> Create koreographer track for blimp fish
+	> Subscribe to koreographer track, set glow values accordingly
