@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Character_Witch_Dragon\ReadMe.txt" />
+    <None Include="Assets\CuteFish\Materials\BlimpFishFourOnTheFloorCrankTheBeatUp.shader" />
     <None Include="Assets\Farm\Shaders\4OnTheFloor.shader" />
     <None Include="Assets\JellyFisher\ReadMe.txt" />
     <None Include="Assets\Koreographer\ReadMe.txt" />

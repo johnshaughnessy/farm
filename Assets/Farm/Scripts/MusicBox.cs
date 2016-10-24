@@ -6,6 +6,7 @@ public class MusicBox : MonoBehaviour
 	[EventID] [SerializeField] private string koreoEventID;
 	[SerializeField] private float minEmission = 1;
 	[SerializeField] private float maxEmission = 2;
+	[SerializeField] private string emissionColorName = "_EmissionColor";
 
 	private Material mat;
 	private float emission = 1;
@@ -19,7 +20,7 @@ public class MusicBox : MonoBehaviour
 
 		mat = GetComponent<Renderer>().sharedMaterial;
 		mat.EnableKeyword("_EMISSION");
-		mat.SetColor("_EmissionColor", defaultEmission * ogEmissionColor);
+		mat.SetColor(emissionColorName, defaultEmission * ogEmissionColor);
 
 		Koreographer.Instance.RegisterForEvents(koreoEventID, LightUp);
 	}
@@ -27,7 +28,7 @@ public class MusicBox : MonoBehaviour
 	void Update()
 	{
 		emission = Mathf.Clamp(Decay(emission, emissionDecayRate), minEmission, maxEmission);
-		mat.SetColor("_EmissionColor", emission * ogEmissionColor);
+		mat.SetColor(emissionColorName, emission * ogEmissionColor);
 	}
 
 	private static float Decay(float f, float rate)
