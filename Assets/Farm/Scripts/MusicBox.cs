@@ -14,10 +14,11 @@ public class MusicBox : MonoBehaviour
 	[SerializeField] private float emissionBump;
 	[SerializeField] private Color ogEmissionColor;
 	[SerializeField] private float defaultEmission = 0.33f;
+	[SerializeField] private int offset = 0;
+	private int count = 0;
 	
 	void Start ()
 	{
-
 		mat = GetComponent<Renderer>().sharedMaterial;
 		mat.EnableKeyword("_EMISSION");
 		mat.SetColor(emissionColorName, defaultEmission * ogEmissionColor);
@@ -38,6 +39,10 @@ public class MusicBox : MonoBehaviour
 
 	private void LightUp(KoreographyEvent koreoevent)
 	{
-		emission += emissionBump;
+		if (count%4 == offset)
+		{
+			emission += emissionBump;
+		}
+		count = count + 1;
 	}
 }
