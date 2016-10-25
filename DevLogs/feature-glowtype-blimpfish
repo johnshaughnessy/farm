@@ -11,3 +11,11 @@ Use cute fish asset from asset store to create a glowing blimpfish.
 	  		texture    == color value on stripe texture 1/2/3/4 (white or black)
 	> Create koreographer track for blimp fish
 	> Subscribe to koreographer track, set glow values accordingly
+
+SUMMARY : 
+
+This was a success, although there a couple of issues with the shader.
+	> top fin of the fish is lighter than the other
+	> top of the fin is orange, not transparent
+	> music box script became complicated. 
+	  perhaps it shouldn't be the _same_ script as the music boxes
