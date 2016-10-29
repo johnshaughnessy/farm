@@ -104,6 +104,8 @@
     <Compile Include="Assets\Koreographer\Demos\Scripts\MusicalImpulse.cs" />
     <Compile Include="Assets\Koreographer\Demos\Scripts\TempoSwitch.cs" />
     <Compile Include="Assets\Koreographer\Demos\Scripts\UIMessageSetter.cs" />
+    <Compile Include="Assets\LookAtTheThing.cs" />
+    <Compile Include="Assets\MimicHeadRotation.cs" />
     <Compile Include="Assets\Owl Package\CharacterTester.cs" />
     <Compile Include="Assets\Owl Package\RotateScript.cs" />
     <Compile Include="Assets\Skybox Clouds\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />

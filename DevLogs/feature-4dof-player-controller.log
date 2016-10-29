@@ -1,0 +1,10 @@
+TODO :
+
+Control an object's position and y-rotation with 2axis input + jump action for position and 2axis input for rotation.
+
+	> Use actions and axes instead of specific hardware.
+	> Allow hardware axes and action maps to register themselves to the controller.
+	> Write code that plugs some vive axes in there.
+	> Write code that enables/disables the plug.
+	> Attach controller (and plugs?) to ruby, vivian, and jelly fisher.
+

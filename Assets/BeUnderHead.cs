@@ -8,7 +8,5 @@ public class BeUnderHead : MonoBehaviour
 	void Update ()
 	{
 		transform.position = head.transform.position - offset;
-		var xzProjection = new Vector3(head.localRotation.eulerAngles.x, 0, head.localRotation.eulerAngles.z);
-		transform.rotation = Quaternion.LookRotation(xzProjection, Vector3.up);
 	}
 }
