@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Valve.VR;
 
 // Rotate this object so that it looks at the thing, but 
 // take the hip rotation into account such that you never 
@@ -6,26 +7,23 @@
 // relative to hips.
 public class LookAtTheThing : MonoBehaviour
 {
-	[SerializeField] private Transform hips;
-	[SerializeField] private Transform thingToLookAt;
-	[SerializeField] private Transform debugEnd;
+	[SerializeField]
+	private Transform hips;
+	public Transform ThingToLookAt;
 
-	void Update ()
+	void LateUpdate()
 	{
-		var directionToLook = thingToLookAt.position - hips.position;
+		var directionToLook = ThingToLookAt.position - hips.position;
 		var lookRotation = Quaternion.LookRotation(directionToLook, Vector3.up);
 		var angleDiff = Quaternion.Angle(hips.rotation, lookRotation);
-		/*
 		if (Mathf.Abs(angleDiff) > 90)
 		{
-			var sign = angleDiff > 0 ? Mathf.PI/4 : -Mathf.PI/4;
-			var direction = Quaternion.AngleAxis(sign, Vector3.up) * hips.forward;
-			debugEnd.position = hips.position + direction;
+			var isFacingRight = Quaternion.Euler(Quaternion.FromToRotation(hips.forward, directionToLook) * Vector3.forward).x > 0;
+			var left = -hips.right;
+			var rotator = Quaternion.FromToRotation(hips.forward, isFacingRight ? hips.right : left);
+			var direction = rotator * hips.forward;
 			lookRotation = Quaternion.LookRotation(direction);
-			Debug.Log("A");
 		}
-		*/
-		debugEnd.position = transform.position + lookRotation*Vector3.forward;
 		transform.rotation = lookRotation;
 	}
 }
